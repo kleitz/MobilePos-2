@@ -1,0 +1,4 @@
+RewiteEngine On
+
+RewriteCond !^(application)
+RewriteRule ^(.*)$ ./index.php/$1
