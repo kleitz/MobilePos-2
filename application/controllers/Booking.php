@@ -18,8 +18,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		   {week_row_end}</tr>{/week_row_end}
 		   {cal_row_start}<tr>{/cal_row_start}
 		   {cal_cell_start}<td>{/cal_cell_start}
-		   {cal_cell_content}<a href="{content}">{day}</a>{/cal_cell_content}
-		   {cal_cell_content_today}<div class="highlight"><a href="{content}">{day}</a></div>{/cal_cell_content_today}
+		   {cal_cell_content}
+		   <div>{day}</div>
+		   <div>{content}</div>
+		   {/cal_cell_content}
+		   {cal_cell_content_today}
+		   <div>{day}</div>
+		   <div>{content}</div>
+		   {/cal_cell_content_today}
 		   {cal_cell_no_content}{day}{/cal_cell_no_content}
 		   {cal_cell_no_content_today}<div class="highlight">{day}</div>{/cal_cell_no_content_today}
 		   {cal_cell_blank}&nbsp;{/cal_cell_blank}
@@ -36,11 +42,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                3  => 'foo',
                7  => 'ddd',
                13 => '2',
-               26 => 'http://example.com/news/article/2006/26/'
+               26 => '예약날짜'
              );
 		
 		$data['booking_calendar'] = $this->calendar->generate($this->uri->segment(3), $this->uri->segment(4),$dday);
-		//변수에 넣음
+		//변수에 넣음  이부분을 수정하여 입력을 만듬.
 		$this->load->view('mobilepos/tpl/header');
 		$this->load->view('mobilepos/tpl/booking',$data); //뷰전달
 		$this->load->view('mobilepos/tpl/footer');	

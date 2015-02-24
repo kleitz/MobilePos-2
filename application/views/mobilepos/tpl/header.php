@@ -27,7 +27,7 @@
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				  <div class="collapse navbar-collapse navbar-ex1-collapse" >
 					<ul class="nav navbar-nav">
-					  <li class="active"><a href="#">예약 하기</a></li>
+					  <li><a href="../ci3/booking">예약 하기</a></li>
 					  <li><a href="#">음식 보기</a></li>
 					  <li><a href="#">이벤트 문의</a></li>
 					  <li><a href="#">먹은 음식</a></li>
